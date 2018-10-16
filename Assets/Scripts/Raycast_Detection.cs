@@ -22,7 +22,7 @@ namespace DemonicCity.BattleScene
             m_ray2d = new Ray2D(Camera.main.ScreenToWorldPoint(touch.position), Vector2.zero);
             m_raycastHit2d = Physics2D.Raycast(m_ray2d.origin, m_ray2d.direction);
 
-            if (m_raycastHit2d.collider.gameObject != null) //ゲームオブジェクトがnullじゃなければ
+            if (m_raycastHit2d && m_raycastHit2d.collider.gameObject != null) //Physics2D.Raycastがtrue且つゲームオブジェクトがnullじゃなければ
             {
                 return m_raycastHit2d.collider.gameObject; //Hitしたゲームオブジェクトを返す
             }

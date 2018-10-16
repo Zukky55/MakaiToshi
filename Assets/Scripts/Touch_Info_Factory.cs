@@ -27,8 +27,6 @@ namespace DemonicCity.BattleScene
                     //m_go = m_raycastDetection.DetectHitGameObject(touch);
                     m_touchPhaseBeganProc = GetComponent<TouchPhase_Began_Processing>();
                     m_touchPhaseBeganProc.Excute();
-                    
-
                     break;
                 case TouchPhase.Moved:
                 case TouchPhase.Stationary:

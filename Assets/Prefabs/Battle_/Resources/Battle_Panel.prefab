@@ -94,8 +94,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_panels:
-  - {fileID: 21300000, guid: bc20fc1a3b40d2347a7c40d2a7a623db, type: 3}
   - {fileID: 21300000, guid: 9e376a2f6ed9e1346ba31fa85a77c970, type: 3}
+  - {fileID: 21300000, guid: 160d533cb903c0c4082b94f5ed181932, type: 3}
+  - {fileID: 21300000, guid: bd70e36e06d08ad479b6988f092fc06c, type: 3}
   - {fileID: 21300000, guid: 4d56c943ab0272c4aa790a5d3413ff3c, type: 3}
 --- !u!114 &114076971656575822
 MonoBehaviour:

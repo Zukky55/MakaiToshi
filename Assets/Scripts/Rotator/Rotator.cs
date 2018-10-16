@@ -18,7 +18,7 @@ namespace DemonicCity.BattleScene
             m_changeSprite = GetComponent<Change_Sprite>();
         }
 
-        private void Start()
+        private void Awake()
         {
             Init();
         }
@@ -34,11 +34,8 @@ namespace DemonicCity.BattleScene
         public void Acceleration()
         {
             m_angularVelocity += 10f;
-            Battle_Manager.m_panelProcessingFlag = false;
-            if(m_angularVelocity == 0f)
-            {
-                Battle_Manager.m_panelProcessingFlag = true;
-            }
+            Panel_Manager.m_panelProcessingFlag = false;
+
         }
 
         /// <summary>角速度が0より上の場合徐々に減速させていく</summary>
@@ -48,14 +45,10 @@ namespace DemonicCity.BattleScene
             {
                 m_angularVelocity -= m_angularVelocity * Time.deltaTime;
             }
-            if (m_angularVelocity < 0.01f && m_angularVelocity > 0f) 
+            if (m_angularVelocity < 0.025f && m_angularVelocity > 0f) 
             {
-                Debug.Log("よばれたお");
-                Debug.Break();
                 m_angularVelocity = 0f;
-                m_frag = true;
             }
-
         }
 
         /// <summary>角速度>1の時マイフレーム毎にy軸に対して回転を掛ける : When angular velocity > 1, rotate it with respect to the y axis for each my frame</summary>
@@ -76,11 +69,11 @@ namespace DemonicCity.BattleScene
         {
             if(m_frag)
             {
-                m_changeSprite.Excute();
+                m_changeSprite.ChangingSprite();
                 m_frag = false;
             }
 
-            m_currentRot = transform.rotation;
+            m_currentRot = transform.rotation; //呼び出されたフレーム時の回転を渡す
             transform.rotation = Quaternion.Slerp(m_currentRot, Quaternion.identity, Time.deltaTime);
         }
     }

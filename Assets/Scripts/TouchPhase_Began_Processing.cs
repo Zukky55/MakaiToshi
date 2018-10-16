@@ -11,11 +11,15 @@ namespace DemonicCity.BattleScene
     public class TouchPhase_Began_Processing : MonoBehaviour,I_Began_Startable
     {
         private Rotator m_rotator;
-        private bool m_startFlag = false;
+        private bool m_flag = true;
 
         public void Excute()
         {
-            m_rotator.Acceleration();
+            if(m_flag)
+            {
+                m_rotator.Acceleration();
+                m_flag = false;
+            }
         }
 
         private void Init()
@@ -23,7 +27,7 @@ namespace DemonicCity.BattleScene
             m_rotator = GetComponent<Rotator>();
         }
 
-        private void Start()
+        private void Awake()
         {
             Init();
         }
