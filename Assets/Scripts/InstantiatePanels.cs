@@ -27,8 +27,8 @@ namespace DemonicCity.BattleScene
         {
 
             m_panelPosMatlix = new float[2][];
-            m_panelPosMatlix[0] = new[] { -2.4f, -3.6f, -4.8f }; //行
-            m_panelPosMatlix[1] = new[] { -5.1f, -3.9f, -2.7f, -1.3f, -0.1f, 1.1f, 2.6f, 3.7f, 4.9f };　//列
+            m_panelPosMatlix[0] = new[] { -2.4f, -3.6f, -4.8f }; //列。yAxis
+            m_panelPosMatlix[1] = new[] { -5.1f, -3.9f, -2.7f, -1.3f, -0.1f, 1.1f, 2.6f, 3.7f, 4.9f };　//行,xAxis
             m_panelPositions = new List<Vector3>();
             m_initializePanels = GetComponent<InitializePanels>();
             
@@ -39,7 +39,7 @@ namespace DemonicCity.BattleScene
             {
                 for (int j = 0; j < m_panelPosMatlix[1].Length; j++)
                 {
-                    m_panelPositions.Add(new Vector3(m_panelPosMatlix[0][i], m_panelPosMatlix[1][j], 0f));
+                    m_panelPositions.Add(new Vector3(m_panelPosMatlix[1][j], m_panelPosMatlix[0][i], 0f));
                 }
             }
 
