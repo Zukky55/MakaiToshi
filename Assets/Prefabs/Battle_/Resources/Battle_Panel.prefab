@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114698655584578584}
   - component: {fileID: 114073437086323354}
   - component: {fileID: 114948383955858180}
+  - component: {fileID: 114217380895629912}
   m_Layer: 0
   m_Name: Battle_Panel
   m_TagString: Untagged
@@ -41,8 +42,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1494285668666228}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.3868645, y: -1.815, z: 0.019606471}
-  m_LocalScale: {x: 0.09088, y: 0.09088, z: 0.09088}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.07521, y: 0.07521, z: 0.07521}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -97,7 +98,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9e376a2f6ed9e1346ba31fa85a77c970, type: 3}
   - {fileID: 21300000, guid: 160d533cb903c0c4082b94f5ed181932, type: 3}
   - {fileID: 21300000, guid: bd70e36e06d08ad479b6988f092fc06c, type: 3}
-  - {fileID: 21300000, guid: 4d56c943ab0272c4aa790a5d3413ff3c, type: 3}
+  - {fileID: 21300000, guid: 56089166f74d87b4fa75d0f7f04a175e, type: 3}
 --- !u!114 &114076971656575822
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -107,6 +108,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 012332e80f5ecda4c9b21bb82049456c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114217380895629912
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1494285668666228}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 177f9c17e9f3ef74d8ada66af800a2e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114315550796692090
